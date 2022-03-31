@@ -1,0 +1,6 @@
+.cache/
+.nuxt/
+coverage/
+dist/
+node_modules/
+*.json

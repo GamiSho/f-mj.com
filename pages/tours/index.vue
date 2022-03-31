@@ -6,7 +6,7 @@
 </i18n>
 
 <template>
-  <div>
+  <div v-if="destinos">
     <div class="flex pt-10 justify-center">
       <NuxtLink
         class="font-bold sm:font-medium text-lg sm:text-sm py-2 sm:py-2 px-4 sm:px-2 sm:mx-2 mx-4 sm:mx-2 rounded bg-blue text-white inline-flex items-center"
@@ -38,89 +38,13 @@
       </NuxtLink>
     </div>
     <TBHeroLeft
-      :destino="cuscoData[0].name"
-      :text="cuscoData[0].description"
-      :image="cuscoData[0].image.url"
+      v-for="d in destinos"
+      :key="d.name"
+      :destino="d.name"
+      :text="d.description"
+      :image="d.image.url"
+      :tours="d.tours"
     />
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
-          <TBCard
-            v-for="(t, index) in cuscoData[0].tours"
-            :key="index"
-            :slug="t.slug"
-            :destino="t.destino"
-            :nombreDelTour="t.nombreDelTour"
-            :caracterDeTour="t.caracterDeTour"
-            :precioAproximado="t.precioAproximado"
-            :image="t.image"
-          />
-        </div>
-      </div>
-    </section>
-    <TBHeroLeft
-      :destino="punoData[0].name"
-      :text="punoData[0].description"
-      :image="punoData[0].image.url"
-    />
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
-          <TBCard
-            v-for="t in punoData[0].tours"
-            :key="t.id"
-            :slug="t.slug"
-            :destino="t.destino"
-            :nombreDelTour="t.nombreDelTour"
-            :caracterDeTour="t.caracterDeTour"
-            :precioAproximado="t.precioAproximado"
-            :image="t.image"
-          />
-        </div>
-      </div>
-    </section>
-    <TBHeroLeft
-      :destino="limaData[0].name"
-      :text="limaData[0].description"
-      :image="limaData[0].image.url"
-    />
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
-          <TBCard
-            v-for="t in limaData[0].tours"
-            :key="t.id"
-            :slug="t.slug"
-            :destino="t.destino"
-            :nombreDelTour="t.nombreDelTour"
-            :caracterDeTour="t.caracterDeTour"
-            :precioAproximado="t.precioAproximado"
-            :image="t.image"
-          />
-        </div>
-      </div>
-    </section>
-    <div class="container">
-      <h1 id="PAQUETE" class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-        PAQUETE
-      </h1>
-    </div>
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
-          <TBCard
-            v-for="t in paqueteData[0].tours"
-            :key="t.id"
-            :slug="t.slug"
-            :destino="t.destino"
-            :nombreDelTour="t.nombreDelTour"
-            :caracterDeTour="t.caracterDeTour"
-            :precioAproximado="t.precioAproximado"
-            :image="t.image"
-          />
-        </div>
-      </div>
-    </section>
     <div class="sticky bottom-10 w-10 ml-auto mr-4">
       <transition name="fade">
         <button
@@ -147,10 +71,6 @@ export default defineComponent({
   setup() {
     const { result } = useQuery(DestinosQ)
     const destinos = useResult(result, [], (data) => data?.destinos as Destino[])
-    const cuscoData = destinos.value.filter((d) => d.name === 'Cusco')
-    const punoData = destinos.value.filter((d) => d.name === 'Puno')
-    const limaData = destinos.value.filter((d) => d.name === 'Lima')
-    const paqueteData = destinos.value.filter((d) => d.name === 'PAQUETE')
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -170,10 +90,7 @@ export default defineComponent({
     }
 
     return {
-      cuscoData,
-      punoData,
-      limaData,
-      paqueteData,
+      destinos,
       visible,
       scrollTop,
     }

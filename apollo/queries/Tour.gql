@@ -1,0 +1,18 @@
+query Tour($slug: String!) {
+  tour(where: { slug: $slug }) {
+    nombreDelTour
+    caracterDeTour
+    precioAproximado
+    image {
+      url
+    }
+    itinerario {
+      title
+      description
+    }
+    serviciosIncluidos
+    noIncluidos
+    recomendaciones
+    informacionUtil
+  }
+}

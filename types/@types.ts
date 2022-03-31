@@ -20,6 +20,7 @@ export interface Tour {
   destino: Destino
   image: Asset
   precioAproximado: string
+  caracterDeTour: string
   sequence: number
 }
 

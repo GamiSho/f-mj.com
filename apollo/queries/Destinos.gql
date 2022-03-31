@@ -1,0 +1,20 @@
+query Destinos {
+  destinos(orderBy: sequence_ASC) {
+    name
+    description
+    image {
+      url
+    }
+    tours {
+      id
+      nombreDelTour
+      precioAproximado
+      caracterDeTour
+      slug
+      image {
+        url
+      }
+      sequence
+    }
+  }
+}
