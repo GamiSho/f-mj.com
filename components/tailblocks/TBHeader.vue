@@ -34,7 +34,7 @@
 <style lang="scss" scoped>
 .header {
   height: 85vh;
-  background: linear-gradient(to top, rgb(255 255 255 / 0%) 0%, rgb(0 0 0 / 30%) 100%), url(https://f-mj.imgix.net/machu-picchu-main.jpg);
+  background: linear-gradient(to top, rgb(255 255 255 / 0%) 0%, rgb(0 0 0 / 30%) 100%), url(https://f-mj.imgix.net/machu-picchu-main.jpg?auto=compress,enhance,format);
   background-repeat:  no-repeat;
   background-position: top;
   background-size: cover;

@@ -28,22 +28,22 @@
     <div class="flex">
       <div class="lg:w-1/4 md:1/2">
         <a href="https://f-mj.imgix.net/1-Declaracion.pdf" download="Declaracion.pdf">
-          <img src="https://f-mj.imgix.net/declaracion.png" alt="" />
+          <img src="https://f-mj.imgix.net/declaracion.png?auto=compress,enhance,forma&w=256&h=363" alt="" />
         </a>
       </div>
       <div class="lg:w-1/4 md:1/2">
         <a href="https://f-mj.imgix.net/2-Licencia.pdf" download="Licencia.pdf">
-          <img src="https://f-mj.imgix.net/licencia-1.png" alt="" />
+          <img src="https://f-mj.imgix.net/licencia-1.png?auto=compress,enhance,format&w=256&h=363" alt="" />
         </a>
       </div>
       <div class="lg:w-1/4 md:1/2">
         <a href="https://f-mj.imgix.net/2-Licencia.pdf" download="Licencia.pdf">
-          <img src="https://f-mj.imgix.net/licencia-2.png" alt="" />
+          <img src="https://f-mj.imgix.net/licencia-2.png?auto=compress,enhance,format&w=256&h=363" alt="" />
         </a>
       </div>
       <div class="lg:w-1/4 md:1/2">
         <a href="https://f-mj.imgix.net/3-Constancia-de-Gercetur.pdf" download="Constancia-de-Gercetur.pdf">
-          <img src="https://f-mj.imgix.net/constancia-de-gercetur.png" alt="" />
+          <img src="https://f-mj.imgix.net/constancia-de-gercetur.png?auto=compress,enhance,format&w=256&h=363" alt="" />
         </a>
       </div>
     </div>

@@ -98,7 +98,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .header {
-  background-image: url(https://f-mj.imgix.net/machu-picchu-head.jpg);
+  background-image: url(https://f-mj.imgix.net/machu-picchu-head.jpg?auto=compress,enhance,format);
   background-repeat:  no-repeat;
   background-position: center;
   background-size: cover;
