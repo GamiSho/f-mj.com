@@ -28,7 +28,6 @@ const config: NuxtConfig = {
   ],
   components: [
     '~/components',
-    '~/components/page-subs',
     '~/components/buttons',
     '~/components/tailblocks',
   ],
