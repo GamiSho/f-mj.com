@@ -44,15 +44,10 @@ module.exports = {
     },
     fontFamily: {
       body: [
-        'Poppins',
-        'Helvetica Neue',
-        'Arial',
-        '游ゴシック',
-        'YuGothic',
-        '-apple-system',
-        'メイリオ',
-        'Meiryo',
-        'sans-serif',
+      'Noto+Sans',
+      'Noto+Sans+Japanese',
+      'Noto+Serif',
+      'Noto+Serif+Japanese',
       ],
     },
     fontSize: {
@@ -67,38 +62,6 @@ module.exports = {
       '4xl': ['40px', '48px'],
       '5xl': ['48px', '56px'],
       '6xl': ['54px', '56px'],
-    },
-    extend: {
-      fontWeight: {
-        medium: 600,
-      },
-      gap: {
-        '20px': '20px',
-      },
-      height: {
-        '3/4': '3px',
-        100: '25rem',
-      },
-      inset: {
-        '2/5': '40%',
-      },
-      maxWidth: {
-        150: '37.5rem',
-      },
-      minHeight: {
-        60: '15rem',
-        '1/2': '50%',
-      },
-      minWidth: {
-        32: '8rem',
-        48: '12rem',
-        80: '20rem',
-      },
-      width: {
-        50: '12.5rem',
-        95: '23rem',
-        98: '26rem',
-      },
     },
   },
   variants: {

@@ -30,6 +30,7 @@ const config: NuxtConfig = {
     '~/components',
     '~/components/buttons',
     '~/components/tailblocks',
+    '~/components/page-subs/blog',
   ],
   buildModules: [
     '@nuxt/postcss8',
@@ -56,18 +57,25 @@ const config: NuxtConfig = {
   i18n: {
     locales: [
       {
-        code: 'es',
-        iso: 'ja-JP',
-        file: 'common/ja.json',
-        name: 'ES',
-        language: 'Español',
-      },
-      {
         code: 'en',
         iso: 'en-US',
         file: 'common/en.json',
         name: 'EN',
         language: 'English',
+      },
+      {
+        code: 'es',
+        iso: 'es-PE',
+        file: 'common/es-PE.json',
+        name: 'ES',
+        language: 'Español',
+      },
+      {
+        code: 'ja',
+        iso: 'ja-JP',
+        file: 'common/ja.json',
+        name: 'JA',
+        language: 'Japanese',
       },
     ],
     strategy: 'prefix',
@@ -117,10 +125,10 @@ const config: NuxtConfig = {
   },
   googleFonts: {
     families: {
-      Poppins: {
-        wght: [200, 300, 400, 600, 700],
-        ital: [300],
-      },
+      'Noto+Sans': true,
+      'Noto+Sans+Japanese': true,
+      'Noto+Serif+Display': true,
+      'Noto+Serif+Japanese': true,
     },
     display: 'swap',
     inject: false,
