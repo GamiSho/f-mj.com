@@ -21,10 +21,16 @@
           Nosotros
         </NuxtLink>
         <NuxtLink
-          :to="localePath({ path: 'como-reservar' })"
+          :to="localePath({ path: '/como-reservar' })"
           class="mr-5 hover:text-gray-900"
         >
           ¿Cómo Reservar?
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath({ path: '/blog' })"
+          class="mr-5 hover:text-gray-900"
+        >
+          Blog
         </NuxtLink>
       </nav>
     </div>
@@ -72,7 +78,10 @@
             <NuxtLink :to="localePath({ path: '/nosotros' })" @click.native="closeMenu">Nosotros</NuxtLink>
           </div>
           <div>
-            <NuxtLink :to="localePath({ path: 'como-reservar' })" @click.native="closeMenu">¿Cómo Reservar?</NuxtLink>
+            <NuxtLink :to="localePath({ path: '/como-reservar' })" @click.native="closeMenu">¿Cómo Reservar?</NuxtLink>
+          </div>
+          <div>
+            <NuxtLink :to="localePath({ path: '/blog' })" @click.native="closeMenu">Blog</NuxtLink>
           </div>
         </nav>
       </transition>

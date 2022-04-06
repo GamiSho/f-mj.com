@@ -30,7 +30,7 @@
         {{ $t('title.contact') }}
       </NuxtLink>
     </div>
-    <div class="p-8 lg:hidden">
+    <div v-if="false" class="p-8 lg:hidden">
       <ul
         class="lang-select relative w-24 m-auto flex flex-col items-center justify-evenly font-light text-ml bg-black border border-white"
         :class="{ open: isLocaleSelectOpen === true }"

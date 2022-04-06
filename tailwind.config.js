@@ -20,6 +20,7 @@ module.exports = {
       white: '#fff',
       black: '#1a1a1a',
       green: '#2cb642',
+      yellow: '#fde047',
       gray: {
         100: 'rgb(243 244 246)',
         200: 'rgb(229 231 235)',
@@ -44,10 +45,10 @@ module.exports = {
     },
     fontFamily: {
       body: [
-      'Noto+Sans',
-      'Noto+Sans+Japanese',
-      'Noto+Serif',
-      'Noto+Serif+Japanese',
+      '"Noto Sans"',
+      '"Noto Sans JP"',
+      '"Noto Serif"',
+      '"Noto Serif JP"',
       ],
     },
     fontSize: {

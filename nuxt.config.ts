@@ -126,9 +126,9 @@ const config: NuxtConfig = {
   googleFonts: {
     families: {
       'Noto+Sans': true,
-      'Noto+Sans+Japanese': true,
-      'Noto+Serif+Display': true,
-      'Noto+Serif+Japanese': true,
+      'Noto+Sans+JP': true,
+      'Noto+Serif': true,
+      'Noto+Serif+JP': true,
     },
     display: 'swap',
     inject: false,

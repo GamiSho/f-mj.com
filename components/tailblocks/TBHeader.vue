@@ -21,10 +21,16 @@
           Nosotros
         </NuxtLink>
         <NuxtLink
-          :to="localePath({ path: 'como-reservar' })"
+          :to="localePath({ path: '/como-reservar' })"
           class="mr-5 hover:text-gray-900"
         >
           ¿Cómo Reservar?
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath({ path: '/blog' })"
+          class="mr-5 hover:text-gray-900"
+        >
+          Blog
         </NuxtLink>
       </nav>
     </div>
