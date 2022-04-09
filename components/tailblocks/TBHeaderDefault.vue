@@ -1,6 +1,6 @@
 <template>
   <header class="header text-white body-font w-screen p-4 flex justiy-between items-center">
-    <div class="header-conetnt mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <div class="lg:bg-gray-0 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <NuxtLink
         :to="localePath({ path: '/' })"
         class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
@@ -111,9 +111,6 @@ export default defineComponent({
   background-repeat:  no-repeat;
   background-position: center;
   background-size: cover;
-  .header-conetnt {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
 }
 
 #menu-toggle:checked + #menu {

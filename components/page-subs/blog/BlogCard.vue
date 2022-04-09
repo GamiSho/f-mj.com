@@ -14,7 +14,6 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  name: 'BlogCard',
   props: {
     slug: {
       type: String,
