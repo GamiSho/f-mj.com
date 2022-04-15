@@ -4,7 +4,6 @@
     class="container flex flex-col-reverse md:flex-row"
   >
     <div class="w-full md:w-2/5 bg-white flex flex-col pt-4 md:pt-10 pb-4 px-4">
-      <h2 class="font-light text-gray-600">{{ category }}</h2>
       <h1 class="font-serif font-bold text-lg md:text-2xl">{{ title }}</h1>
     </div>
     <div class="w-full md:w-3/5">
@@ -25,10 +24,6 @@ export default defineComponent({
     title: {
       type: String,
       required: true,
-    },
-    category: {
-      type: String,
-      default: '',
     },
     image: {
       type: String,

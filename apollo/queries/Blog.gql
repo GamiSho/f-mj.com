@@ -1,0 +1,12 @@
+query Blog($slug: String!) {
+  blog(where: { slug: $slug }) {
+    title
+    image {
+      url
+    }
+    contenido {
+      html
+      text
+    }
+  }
+}

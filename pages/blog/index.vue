@@ -1,78 +1,49 @@
 <template>
   <div class="w-full py-10">
-    <section class="blog-hero py-10 mb-10">
+    <section v-if="postTop" class="blog-hero py-10 mb-10">
       <BlogCardTop
-        :slug="posts[0].slug"
-        :title="posts[0].title"
-        :category="posts[0].category"
-        :image="posts[0].image"
+        :slug="postTop.slug"
+        :title="postTop.title"
+        :image="postTop.image.url"
       />
     </section>
-    <section class="container grid gap-x-4 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <section v-if="posts"  class="container grid gap-x-4 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <BlogCard
         v-for="post in posts"
         :key="post.id"
         :slug="post.slug"
         :title="post.title"
-        :category="post.category"
-        :image="post.image"
-        :posted-at="post.postedAt"
+        :image="post.image.url"
       />
     </section>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { useResult, useQuery } from '@vue/apollo-composable'
+import BlogsQ from '~/apollo/queries/Blogs.gql'
+import { Blog } from '~/types/@types'
 
 export default defineComponent({
   name: 'BlogPage',
   setup() {
-    // TODO GraphQL で最初の1記事とそれ以降を分けて取得する
-    const posts = [
-      {
-        id: 1,
-        slug: 'test-slug',
-        title: 'Artist Reyna Noriega Shares Her Best Self-Care Tips For Women',
-        category: 'sample category',
-        postedAt: '2022/01/12',
-        image: 'https://f-mj.com/img/tours/Cusco/CUSCO.jpg'
-      },
-      {
-        id: 2,
-        slug: 'test-slug',
-        title: 'Artist Reyna Noriega Shares Her Best Self-Care Tips For Women',
-        category: 'sample category',
-        postedAt: '2022/01/12',
-        image: 'https://f-mj.com/img/tours/Cusco/CUSCO.jpg'
-      },
-      {
-        id: 3,
-        slug: 'test-slug',
-        title: 'Artist Reyna Noriega Shares Her Best Self-Care Tips For Women',
-        category: 'sample category',
-        postedAt: '2022/01/12',
-        image: 'https://f-mj.com/img/tours/Cusco/CUSCO.jpg'
-      },
-      {
-        id: 4,
-        slug: 'test-slug',
-        title: 'Artist Reyna Noriega Shares Her Best Self-Care Tips For Women',
-        category: 'sample category',
-        postedAt: '2022/01/12',
-        image: 'https://f-mj.com/img/tours/Cusco/CUSCO.jpg'
-      },
-      {
-        id: 5,
-        slug: 'test-slug',
-        title: 'Artist Reyna Noriega Shares Her Best Self-Care Tips For Women',
-        category: 'sample category',
-        postedAt: '2022/01/12',
-        image: 'https://f-mj.com/img/tours/Cusco/CUSCO.jpg'
-      },
-    ]
+    const { result } = useQuery(BlogsQ)
+    const initPostTop: Blog = {
+      id: '',
+      title: '',
+      slug: '',
+      contenido: { html: '' },
+    }
+    const postTop = ref<Blog>(initPostTop)
+    const posts = ref<Blog[]>([])
+    const blogs = useResult(result, [], (data) => data?.blogs as Blog[])
+    const [head, ...tail] = blogs.value
+    postTop.value = head
+    posts.value = tail
 
     return {
+      postTop,
       posts,
     }
   },

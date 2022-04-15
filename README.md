@@ -34,4 +34,6 @@ $ firebase deploy
 - [ ] test
 - [ ] ci/cd
 - [ ] SEO対策
+- [ ] GA 入れる
 - [ ] blog
+- [ ] font serif not working

@@ -1,5 +1,10 @@
 type Nullable<T> = T | null
 
+type RichText = Nullable<{
+  text?: string
+  html?: string
+}>
+
 export type Asset = Nullable<{
   url: string
   ogp?: string
@@ -29,4 +34,12 @@ export interface Destino {
   description: string
   image?: Asset
   tours: Tour[]
+}
+
+export interface Blog {
+  id: string
+  title: string
+  slug: string
+  image?: Asset
+  contenido: RichText
 }

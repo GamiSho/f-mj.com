@@ -4,9 +4,7 @@
     class="flex flex-col"
   >
     <img class="object-cover object-center" :src="image" alt="">
-    <h2 class="font-light text-gray-600">{{ category }}</h2>
     <h1>{{ title }}</h1>
-    <span>{{ postedAt }}</span>
   </NuxtLink>
 </template>
 
@@ -20,14 +18,6 @@ export default defineComponent({
       required: true,
     },
     title: {
-      type: String,
-      required: true,
-    },
-    category: {
-      type: String,
-      default: '',
-    },
-    postedAt: {
       type: String,
       required: true,
     },
