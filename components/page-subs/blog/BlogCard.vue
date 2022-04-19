@@ -1,10 +1,12 @@
 <template>
   <NuxtLink
     :to="localePath({ path: `/blog/${slug}` })"
-    class="flex flex-col"
+    class="flex flex-col bg-white"
   >
     <img class="object-cover object-center" :src="image" alt="">
-    <h1>{{ title }}</h1>
+    <div class="p-2">
+      <h1 class="text-md">{{ title }}</h1>
+    </div>
   </NuxtLink>
 </template>
 

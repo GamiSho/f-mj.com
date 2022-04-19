@@ -1,6 +1,6 @@
 <template>
-  <article v-if="blog">
-    <h1>{{ blog.title }}</h1>
+  <article v-if="blog" class="container bg-white p-4">
+    <h1 class="text-4xl font-bold my-10">{{ blog.title }}</h1>
     <div>
       <img :src="blog.image.url" alt="">
     </div>
@@ -15,6 +15,7 @@ import BlogQ from '~/apollo/queries/Blog.gql'
 import { Blog } from '~/types/@types'
 
 export default defineComponent({
+  layout: 'blog',
   setup() {
     const route = useRoute()
     const slug = route.value.params.slug

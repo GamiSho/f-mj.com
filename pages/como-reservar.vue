@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-20">
+  <div class="container py-20 bg-white px-2">
     <div>
       <h1 class="text-3xl mt-4">
         Pasos sencillos

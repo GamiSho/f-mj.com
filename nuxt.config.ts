@@ -7,7 +7,7 @@ const config: NuxtConfig = {
   target: 'static',
   ssr: false,
   head: {
-    title: 'fmj',
+    title: 'f-mj.com',
     titleTemplate: '%s - Find my journey',
     meta: [
       { charset: 'utf-8' },
@@ -78,11 +78,11 @@ const config: NuxtConfig = {
         language: 'Japanese',
       },
     ],
-    strategy: 'prefix',
-    defaultLocale: 'en',
+    strategy: 'no_prefix',
+    defaultLocale: 'es',
     langDir: 'locales/',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'es',
     },
     detectBrowserLanguage: {
       useCookie: true,
@@ -111,7 +111,7 @@ const config: NuxtConfig = {
   firebase: 
   {
     config: {
-      apiKey: "AIzaSyDfZLB-3c85wXbZJCV4hLfsLL5SggemI_g",
+      apiKey: process.env.FIREBASE_CONFIG_API_KEY,
       authDomain: "fmj-site.firebaseapp.com",
       projectId: "fmj-site",
       storageBucket: "fmj-site.appspot.com",

@@ -1,5 +1,5 @@
 query Destinos {
-  destinos(orderBy: sequence_ASC) {
+  destinos(orderBy: orden_ASC) {
     name
     description
     image {
@@ -14,7 +14,7 @@ query Destinos {
       image {
         url
       }
-      sequence
+      orden
     }
   }
 }

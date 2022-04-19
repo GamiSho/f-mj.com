@@ -1,13 +1,6 @@
 <template>
-  <div class="w-full py-10">
-    <section v-if="postTop" class="blog-hero py-10 mb-10">
-      <BlogCardTop
-        :slug="postTop.slug"
-        :title="postTop.title"
-        :image="postTop.image.url"
-      />
-    </section>
-    <section v-if="posts"  class="container grid gap-x-4 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+  <div v-if="posts" class="w-full py-10">
+    <section class="container grid gap-x-4 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <BlogCard
         v-for="post in posts"
         :key="post.id"
@@ -20,30 +13,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 import { useResult, useQuery } from '@vue/apollo-composable'
 import BlogsQ from '~/apollo/queries/Blogs.gql'
 import { Blog } from '~/types/@types'
 
 export default defineComponent({
+  layout: 'blog',
   name: 'BlogPage',
   setup() {
     const { result } = useQuery(BlogsQ)
-    const initPostTop: Blog = {
-      id: '',
-      title: '',
-      slug: '',
-      contenido: { html: '' },
-    }
-    const postTop = ref<Blog>(initPostTop)
-    const posts = ref<Blog[]>([])
-    const blogs = useResult(result, [], (data) => data?.blogs as Blog[])
-    const [head, ...tail] = blogs.value
-    postTop.value = head
-    posts.value = tail
+    const posts = useResult(result, [], (data) => data?.blogs as Blog[])
 
     return {
-      postTop,
       posts,
     }
   },
