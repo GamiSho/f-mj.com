@@ -45,12 +45,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      body: [
-      '"Noto Sans"',
-      '"Noto Sans JP"',
-      '"Noto Serif"',
-      '"Noto Serif JP"',
-      ],
+      'sans': ['"Noto Sans"', '"Noto Sans JP"'],
+      'serif': ['"Noto Serif"', '"Noto Serif JP"'],
     },
     fontSize: {
       sm: '12px',

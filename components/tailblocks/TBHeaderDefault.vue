@@ -33,6 +33,39 @@
           Blog
         </NuxtLink>
       </nav>
+      <ul
+        v-if="false"
+        class="lang-select relative w-20 m-auto flex flex-col font-light text-md bg-white text-black border border-black rounded-lg"
+        :class="{ open: isLocaleSelectOpen === true }"
+        @click="toggleLocaleSelect"
+      >
+        <li
+          v-for="locale in $i18n.locales"
+          :key="locale.code"
+          :class="{ 'is-active': locale.code === $i18n.locale }"
+          class="border-solid h-8 w-full pl-3 py-1"
+        >
+          <a :href="switchLocalePath(locale.code)">
+            {{ locale.name }}
+          </a>
+        </li>
+        <svg
+          class="absolute top-3.5 right-4"
+          width="16"
+          height="9"
+          viewBox="0 0 16 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 1L8 8L1 1"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </ul>
     </div>
     <div class="block lg:hidden border-2 border-white rounded-full p-4 w-16 h-16">
       <label for="menu-toggle" class="block cursor-pointer">
@@ -96,8 +129,14 @@ export default defineComponent({
   setup() {
     const menuChecked = ref(false)
     const closeMenu = () => (menuChecked.value = false)
+    const isLocaleSelectOpen = ref(false)
+    const toggleLocaleSelect = () => {
+      isLocaleSelectOpen.value = !isLocaleSelectOpen.value
+    }
 
     return {
+      isLocaleSelectOpen,
+      toggleLocaleSelect,
       menuChecked,
       closeMenu,
     }
@@ -111,6 +150,22 @@ export default defineComponent({
   background-repeat:  no-repeat;
   background-position: center;
   background-size: cover;
+  .lang-select {
+    li {
+      display: none;
+      &.is-active {
+        display: block;
+      }
+    }
+    &.open {
+      & > li {
+        display: block;
+      }
+      & > .is-active {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 #menu-toggle:checked + #menu {

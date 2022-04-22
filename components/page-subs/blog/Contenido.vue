@@ -38,6 +38,12 @@ export default defineComponent({
   > h6 {
     @apply text-sm my-4;
   }
+  > p {
+    @apply px-2
+  }
+  & a {
+    @apply text-blue;
+  }
   > table {
     @apply table-auto border-collapse border border-gray-400 my-4;
     thead {
