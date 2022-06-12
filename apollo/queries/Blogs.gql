@@ -1,0 +1,11 @@
+query Blogs {
+  blogs(orderBy: publishedAt_DESC) {
+    id
+    title
+    slug
+    publishedAt
+    image {
+      url
+    }
+  }
+}
