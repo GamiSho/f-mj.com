@@ -17,8 +17,6 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn --check-files --frozen-lockfile --non-interactive
-      - name: Run tests
-        run: yarn test:unit
       - name: Build
         run: yarn generate
       - name: Deploy to firebase
