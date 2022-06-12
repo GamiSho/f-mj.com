@@ -26,7 +26,7 @@ $ firebase deploy
 ## TODOs
 - [x] f-mjでfirebase init
 - [x] delete carousel and content from top page
-- [ ] push to github
+- [x] push to github
 - [x] 画像をcdn経由で
 - [ ] Use @nuxt/image and add to tsconfig.json
 - [x] コンテンツをgraphcms経由で
@@ -35,5 +35,5 @@ $ firebase deploy
 - [ ] ci/cd
 - [ ] SEO対策
 - [ ] GA 入れる
-- [ ] blog
+- [x] blog
 - [ ] font serif not working
