@@ -3,7 +3,7 @@
     :to="localePath({ path: `/blog/${slug}` })"
     class="flex flex-col bg-white"
   >
-    <img class="object-cover object-center" :src="image" alt="">
+    <img v-if="image" class="object-cover object-center" :src="image" alt="">
     <div class="p-2">
       <h1 class="text-md">{{ title }}</h1>
     </div>
@@ -25,7 +25,7 @@ export default defineComponent({
     },
     image: {
       type: String,
-      required: true,
+      default: '',
     },
   },
   setup() {},
