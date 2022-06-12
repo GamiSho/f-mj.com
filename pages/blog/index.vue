@@ -6,7 +6,7 @@
         :key="post.id"
         :slug="post.slug"
         :title="post.title"
-        :image="post.image.url"
+        :image="post.image ? post.image.url : ''"
       />
     </section>
   </div>
