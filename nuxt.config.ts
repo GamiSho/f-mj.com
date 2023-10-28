@@ -78,7 +78,7 @@ const config: NuxtConfig = {
         language: 'Japanese',
       },
     ],
-    strategy: 'no_prefix',
+    // strategy: 'no_prefix',
     defaultLocale: 'es',
     langDir: 'locales/',
     vueI18n: {

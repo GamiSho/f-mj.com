@@ -1,8 +1,11 @@
 {
   "title.privacy": "Policy word",
-  "title.contact": "Contactar",
+  "title.contact": "Contact",
   "title.sustainability": "Our SDGs",
   "title.news": "News",
-  "title.adventure": "Destino",
-  "title.blog": "Blog"
+  "title.adventure": "Place to go",
+  "title.blog": "Blogg",
+  "title.tours": "Tours",
+  "title.about-us": "Abaut us",
+  "title.booking": "Booking"  
 }

@@ -12,19 +12,19 @@
           :to="localePath({ path: '/tours' })"
           class="mr-5 hover:text-gray-900"
         >
-          Tours
+        {{ $t('title.tours') }}
         </NuxtLink>
         <NuxtLink
           :to="localePath({ path: '/nosotros' })"
           class="mr-5 hover:text-gray-900"
         >
-          Nosotros
+        {{ $t('title.about-us') }}
         </NuxtLink>
         <NuxtLink
           :to="localePath({ path: '/como-reservar' })"
           class="mr-5 hover:text-gray-900"
         >
-          ¿Cómo Reservar?
+        {{ $t('title.booking') }}
         </NuxtLink>
         <NuxtLink
           :to="localePath({ path: '/blog' })"
