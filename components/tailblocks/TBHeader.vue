@@ -25,7 +25,7 @@
           {{ $t('title.about-us') }}
         </NuxtLink>
         <NuxtLink
-          :to="localePath({ path: 'como-reservar' })"
+          :to="localePath({ path: $t('route:booking') })"
           class="mr-5 hover:text-gray-900"
         >
           {{ $t('title.booking') }}
@@ -37,7 +37,7 @@
           Blog
         </NuxtLink>
       </nav>
-      <ul
+      <!-- <ul
         v-if="true"
         class="lang-select relative w-20 m-auto flex flex-col font-light text-md bg-white text-black border border-black rounded-lg"
         :class="{ open: isLocaleSelectOpen === true }"
@@ -69,7 +69,57 @@
             stroke-linejoin="round"
           />
         </svg>
-      </ul>
+      </ul> -->
+      <div class="lang-select">
+        <button
+          id="dropdownDefaultButton"
+          data-dropdown-toggle="dropdown"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button"
+          @click="toggleLocaleSelect"
+        >
+          {{ $i18n.locale }}
+          <svg
+            class="w-2.5 h-2.5 ml-2.5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+          :class="{ open: isLocaleSelectOpen === true }"
+          class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 fixed general"
+        >
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-900"
+            aria-labelledby="dropdownDefaultButton"
+          >
+            <li
+              v-for="locale in $i18n.locales"
+              :key="locale.code"
+              :class="{ 'is-active': locale.code === $i18n.locale }"
+            >
+              <a
+                :href="switchLocalePath(locale.code)"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-gray-900 text-gray-900"
+              >
+                {{ locale.name }}</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -106,22 +156,19 @@ export default defineComponent({
   background-size: cover;
 
   .lang-select {
-    li {
+    & > .general {
       display: none;
+    }
 
+    li {
       &.is-active {
         display: block;
+        text-decoration: underline;
       }
     }
 
-    &.open {
-      & > li {
-        display: block;
-      }
-
-      & > .is-active {
-        text-decoration: underline;
-      }
+    & > .open {
+      display: block;
     }
   }
 }
