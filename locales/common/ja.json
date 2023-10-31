@@ -7,5 +7,8 @@
   "title.blog": "Blogg",
   "title.tours": "Tours",
   "title.about-us": "Abaut us",
-  "title.booking": "Booking"  
+  "title.booking": "Booking",
+  "route:about-us": "about-in-japanese",
+  "route:booking": "booking",
+  "route:contact": "contact"
 }

@@ -7,5 +7,8 @@
   "title.blog": "Blog",
   "title.tours": "Tours",
   "title.about-us": "Nosotros",
-  "title.booking": "¿Cómo Reservar?"
+  "title.booking": "¿Cómo Reservar?",
+  "route:about-us": "nosotros",
+  "route:booking": "como-reservar",
+  "route:contact": "contactar"
 }

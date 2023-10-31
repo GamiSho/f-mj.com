@@ -80,7 +80,7 @@ const config: NuxtConfig = {
         language: 'Japanese',
       },
     ],
-    // strategy: 'no_prefix',
+    strategy: 'prefix_and_default',
     defaultLocale: 'es',
     langDir: 'locales/',
     vueI18n: {
@@ -92,6 +92,27 @@ const config: NuxtConfig = {
       redirectOn: 'root',
     },
     vueI18nLoader: true,
+    parsePages: false,
+    pages: {
+      'about/about_es': {
+        es: '/nosotros',
+      },
+      'about/about_ja': {
+        ja: '/about-in-japanese',
+      },
+      'booking/booking_es': {
+        es: '/como-reservar',
+      },
+      'booking/booking_ja': {
+        ja: '/booking',
+      },
+      'contact/contact_es': {
+        es: '/contactar',
+      },
+      'contact/contact_ja': {
+        ja: '/contact',
+      },
+    },
   },
   generate: {
     fallback: true,
