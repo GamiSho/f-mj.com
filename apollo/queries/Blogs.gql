@@ -1,5 +1,5 @@
-query Blogs {
-  blogs(orderBy: publishedAt_DESC) {
+query Blogs($locale: Locale!) {
+  blogs(orderBy: publishedAt_DESC, locales: [$locale]) {
     id
     title
     slug

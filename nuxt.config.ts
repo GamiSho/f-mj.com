@@ -13,7 +13,11 @@ const config: NuxtConfig = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'format-detection', content: 'telephone=no' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Find my journey' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Find my journey',
+      },
       { hid: 'og:type', property: 'og:type', content: 'article' },
     ],
     link: [
@@ -23,9 +27,7 @@ const config: NuxtConfig = {
     ],
   },
   css: ['~/assets/css/tailwind.css'],
-  plugins: [
-    '~/plugins/apollo',
-  ],
+  plugins: ['~/plugins/apollo'],
   components: [
     '~/components',
     '~/components/buttons',
@@ -56,13 +58,13 @@ const config: NuxtConfig = {
   env: {},
   i18n: {
     locales: [
-      {
-        code: 'en',
-        iso: 'en-US',
-        file: 'common/en.json',
-        name: 'EN',
-        language: 'English',
-      },
+      // {
+      //   code: 'en',
+      //   iso: 'en-US',
+      //   file: 'common/en.json',
+      //   name: 'EN',
+      //   language: 'English',
+      // },
       {
         code: 'es',
         iso: 'es-PE',
@@ -108,16 +110,15 @@ const config: NuxtConfig = {
     },
     includeNodeModules: true,
   },
-  firebase: 
-  {
+  firebase: {
     config: {
       apiKey: process.env.FIREBASE_CONFIG_API_KEY,
-      authDomain: "fmj-site.firebaseapp.com",
-      projectId: "fmj-site",
-      storageBucket: "fmj-site.appspot.com",
-      messagingSenderId: "307908233050",
-      appId: "1:307908233050:web:705932be63b738e9121563",
-      measurementId: "G-XRY52CDVDQ"
+      authDomain: 'fmj-site.firebaseapp.com',
+      projectId: 'fmj-site',
+      storageBucket: 'fmj-site.appspot.com',
+      messagingSenderId: '307908233050',
+      appId: '1:307908233050:web:705932be63b738e9121563',
+      measurementId: 'G-XRY52CDVDQ',
     },
     services: {
       analytics: true,

@@ -1,5 +1,5 @@
-query Blog($slug: String!) {
-  blog(where: { slug: $slug }) {
+query Blog($slug: String!, $locale: Locale!) {
+  blog(where: { slug: $slug }, locales: [$locale]) {
     title
     image {
       url

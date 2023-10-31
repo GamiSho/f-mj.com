@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useRoute } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useRoute } from '@nuxtjs/composition-api'
 import { useResult, useQuery } from '@vue/apollo-composable'
 import BlogQ from '~/apollo/queries/Blog.gql'
 import { Blog } from '~/types/@types'
@@ -19,7 +19,8 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const slug = route.value.params.slug
-    const { result } = useQuery(BlogQ, { slug })
+    const { app } = useContext()
+    const { result } = useQuery(BlogQ, { slug, locale: app.i18n.locale })
     const blog = useResult(result, undefined, (data) => data?.blog as Blog)
 
     return {
