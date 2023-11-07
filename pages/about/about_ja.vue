@@ -1,24 +1,31 @@
 <template>
   <div class="container py-20 bg-white px-2">
     <div>
-      <h2 class="text-3xl my-4">Japon con jamon</h2>
+      <h2 class="text-3xl my-4">
+        私たちFind My Journey (FMJ)は、ペルー在・邦人旅行会社です。
+      </h2>
       <p class="mb-4 text-lg">
-        This is in Japaneese
-        como Machu Picchu un día, Montaña de colores, Lago Humantay, etc.
+        FMJ の経営理念は、「お客様は家族」です。
+        なので、ペルーに住んでいる親戚だと思っていただいて、お気軽にご相談ください！
+        どんな要望でも親身になり、実現できるよう努力します。
       </p>
       <p class="mb-4 text-lg">
-        Cada viaje es único. Somos conscientes de que nunca se vuelve a repetir
-        el mismo tiempo, Por eso Find My Journey.. Encuentra "Mi viaje".
+        8年前、私はペルーに着任し、日本から派遣された旅行会社の駐在員でした。
+        その当時、大手旅行代理店からお仕事を受け、旅行者のスケジュール管理やサービスの監督を行っていました。
       </p>
       <p class="mb-4 text-lg">
-        Nosotros te recibiremos como nuestra familia. Si mi hermana quiere un
-        viaje económico, pues buscaré una forma de que el costo baje y pueda
-        recibir buen servicio.
-      </p>
-      <p class="mb-4 text-lg">
-        Por eso nuestro lema es "Cliente es Familia" Aquí en Find My Journey,
-        encuentra un único viaje para tí. Te ayudamos para que tu viaje sea
-        super bonito.
+        ある日、親しい友人がペルーを訪れることになり、彼らからのさまざまな要望や質問を受けました。
+        その経験から、旅行会社にいながらも、個別の相談やアドバイスが不足していることに気付きました。
+        現地の駐在員と旅行者との間には多くの仲介の部署や業者がありました。
+        その関係上、直接の交流が不足しており、交流ができても立場上、自由にアドバイスができませんでした。
+        <br />
+        ...2021年パンデミックの影響で会社から日本への帰国要請がありました。
+        それを受けて、私は元いた会社を退職し、自身のツアー会社・旅行代理店を設立しました。
+        <br />
+        多分、一生に一度になるペルー旅行を、思い出深い旅行にするため全力を尽くします。
+        お客様を家族のように大切にし、ご帰国まで全力でサポートをします。
+        <br />
+        上野
       </p>
     </div>
     <div class="flex">

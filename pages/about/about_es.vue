@@ -3,22 +3,38 @@
     <div>
       <h2 class="text-3xl my-4">Nosotros</h2>
       <p class="mb-4 text-lg">
-        Somos un operador de turismo en Cusco, Perú. Ofrecemos paquetes básicos
-        como Machu Picchu un día, Montaña de colores, Lago Humantay, etc.
+        Nuestro lema es "los clientes son como familia". Por lo tanto, le
+        pedimos que nos considere como sus parientes que viven en Perú y no dude
+        en consultarnos de manera informal. Estamos comprometidos en estar
+        atentos y hacer todo lo posible para cumplir cualquier solicitud que
+        tenga.
       </p>
       <p class="mb-4 text-lg">
-        Cada viaje es único. Somos conscientes de que nunca se vuelve a repetir
-        el mismo tiempo, Por eso Find My Journey.. Encuentra "Mi viaje".
+        Hace 8 años, llegué a Perú como un empleado enviado desde Japón por una
+        agencia de viajes. En ese momento, trabajaba en la gestión de horarios
+        de viajeros y supervisaba servicios en nombre de una agencia de viajes
+        líder.
       </p>
       <p class="mb-4 text-lg">
-        Nosotros te recibiremos como nuestra familia. Si mi hermana quiere un
-        viaje económico, pues buscaré una forma de que el costo baje y pueda
-        recibir buen servicio.
+        Un día, unos amigos cercanos planeaban visitar Perú y me hicieron varias
+        preguntas y solicitudes. A partir de esa experiencia, me di cuenta de
+        que, a pesar de trabajar en una agencia de viajes, faltaba un
+        asesoramiento personalizado. Había muchas intermediaciones y proveedores
+        entre los empleados locales y los viajeros.
       </p>
       <p class="mb-4 text-lg">
-        Por eso nuestro lema es "Cliente es Familia" Aquí en Find My Journey,
-        encuentra un único viaje para tí. Te ayudamos para que tu viaje sea
-        super bonito.
+        Debido a los efectos de la pandemia, en 2021, la empresa me pidió
+        regresar a Japón. En respuesta, renuncié a mi empleo anterior y fundé mi
+        propia agencia de viajes y tours.
+      </p>
+      <p class="mb-4 text-lg">
+        Nuestro objetivo es hacer que su viaje a Perú, que tal vez sea único en
+        la vida, sea inolvidable. Tratamos a nuestros clientes como si fueran
+        familia y brindamos un apoyo total hasta su regreso.
+      </p>
+      <p class="mb-4 text-lg">
+        Atentamente, <br />
+        Hiko
       </p>
     </div>
     <div class="flex">

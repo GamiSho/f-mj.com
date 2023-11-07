@@ -17,7 +17,7 @@
         <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
           <div class="lg:w-1/2 px-6">
             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Dirección</h2>
-            <p class="mt-1">Calle Maruri 265-102ª, Cusco</p>
+            <p class="mt-1">Calle Maruri #265 Ofi.102A, Cusco - Perú</p>
           </div>
           <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Correo</h2>
@@ -28,7 +28,7 @@
               <a href="https://api.whatsapp.com/message/RFCYBG2FTNDFH1" target="_blank">
                 <img class="w-10" src="~/assets/whatsapp-2.png" alt="">
               </a>
-              <p class="leading-relaxed">+51-927-964-595 / +51-955797-889</p>
+              <p class="leading-relaxed">+51-927-964-595 / +51-984-131-495</p>
             </div>
           </div>
         </div>

@@ -69,14 +69,14 @@ const config: NuxtConfig = {
         code: 'es',
         iso: 'es-PE',
         file: 'common/es-PE.json',
-        name: 'ES',
+        name: 'ESPAÑOL',
         language: 'Español',
       },
       {
         code: 'ja',
         iso: 'ja-JP',
         file: 'common/ja.json',
-        name: 'JA',
+        name: '日本語',
         language: 'Japanese',
       },
     ],
@@ -93,12 +93,13 @@ const config: NuxtConfig = {
     },
     vueI18nLoader: true,
     parsePages: false,
+    // make sure to match this routes with locales/common/_lan_.json > route._prop file
     pages: {
       'about/about_es': {
         es: '/nosotros',
       },
       'about/about_ja': {
-        ja: '/about-in-japanese',
+        ja: '/about-us',
       },
       'booking/booking_es': {
         es: '/como-reservar',
@@ -107,10 +108,16 @@ const config: NuxtConfig = {
         ja: '/booking',
       },
       'contact/contact_es': {
-        es: '/contactar',
+        es: '/contactanos',
       },
       'contact/contact_ja': {
         ja: '/contact',
+      },
+      'terms-conditions/terms-conditions_ja': {
+        ja: '/privacy-policy',
+      },
+      'terms-conditions/terms-conditions_es': {
+        es: '/terminos-y-condiciones',
       },
     },
   },

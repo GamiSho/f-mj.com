@@ -1,6 +1,6 @@
 {
   "title.privacy": "Política",
-  "title.contact": "Contactar",
+  "title.contact": "Contáctanos",
   "title.sustainability": "Our SDGs",
   "title.news": "News",
   "title.adventure": "Tours",
@@ -8,7 +8,9 @@
   "title.tours": "Tours",
   "title.about-us": "Nosotros",
   "title.booking": "¿Cómo Reservar?",
-  "route:about-us": "nosotros",
-  "route:booking": "como-reservar",
-  "route:contact": "contactar"
+  "route.about-us": "nosotros",
+  "route.booking": "como-reservar",
+  "route.contact": "contactanos",
+  "route.privacy": "terminos-y-condiciones",
+  "route.tours": "tours"
 }

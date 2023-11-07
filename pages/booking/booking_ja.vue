@@ -1,79 +1,70 @@
 <template>
   <div class="container py-20 bg-white px-2">
     <div>
-      <h1 class="text-3xl mt-4">
-        Pasos sencillos
-      </h1>
+      <h1 class="text-3xl mt-4">第一段階</h1>
       <h2 class="text-lg mb-20">
-        Desde que encuentre tu tour hasta participar al tour.
+        まずはメール・Line・Whatsapp等でお客様のご旅行プランの確認を行います。
+        <br />
+        こちらからもご提案させていただきますので、ざっくりどのようなプランが良いのかご相談ください。
+        <br />
+        出発日・期間・訪れたい観光スポット・その他の情報を頂ければ、ご提案致します。
+        <br />
+        ペルーに住んでいる親戚の感覚で、お気軽にご相談ください。
       </h2>
       <div class="mb-10">
-        <h3 class="text-xl font-medium mb-2">
-          Paso１. Contáctate con nosotros
-        </h3>
+        <h3 class="text-xl font-medium mb-2">第二段階</h3>
         <p class="text-lg">
-          Dejar un mensaje por Facebook, Instagram, Whatsapp, Email o desde la plataforma de nuestra página Web.
-          Indíquenos lo siguiente para asesorar mejor tu viaje. 
+          次に、プランの相互確認を行い、確定した後、手配を開始します。
           <br />
-          ¿Qué actividad? ¿Para Cuándo?
-          <br />
-          ¿Cuántas personas? ¿Cuál es su nombre?
+          手配完了後、手配完了の旨をメールにてお知らせいたします。
         </p>
       </div>
       <div class="mb-10">
-        <h3 class="text-xl font-medium mb-2">
-          Paso 2. El adelanto de pago
-        </h3>
+        <h3 class="text-xl font-medium mb-2">第三段階</h3>
         <p class="text-lg">
-          El pago se realiza en dos partes, para asegurar su reserva es necesario pagar un primer pago del 50% del paquete turístico.
+          ご出発日より35日前から30日前までにお客様より支払いを頂き、パスポート情報/フライト情報をお送りいただきます。
           <br />
-          Te enviaremos un enlace para que realices el adelanto de pago.
+          ご出発日より30日以内に手配のご依頼を頂いた際は、お支払いを頂き、パスポート情報をお送り頂いた後に手配を開始致します。
           <br />
-          El adelanto pago adelanto es el 50% de la tarifa.
+          お支払いを頂く前に弊社の約款を必ずご確認下さい。
         </p>
       </div>
       <div class="mb-10">
-        <h3 class="text-xl font-medium mb-2">
-          Paso 3. Confirmación de Reserva
-        </h3>
+        <h3 class="text-xl font-medium mb-2">第四段階</h3>
         <p class="text-lg">
-          Después de realizar el adelanto, te llegará la confirmación de la reserva con el itinerario y las indicaciones de los servicios incluidos.
+          ご出発15日前頃に最終日程表及び、チケット類をメールにてお送り致します。
         </p>
       </div>
       <div class="mb-10">
-        <h3 class="text-xl font-medium mb-2">
-          Paso 4. El pago final
-        </h3>
+        <h3 class="text-xl font-medium mb-2">お支払い方法</h3>
         <p class="text-lg">
-          Este pago se debe realizar hasta 35 días antes de la llegada.
+          -クレジットカードの場合、こちらで決済リンクをお送り致しますので、ご自身で決済を行いください。
           <br />
-          Si tu realizas tu reserva de los 35 días antes del servicio, el pago sería único, 100% del precio.
-          <br />
-          Si tu reservas dentro de los 35 días antes del inicio de tu viaje el pago debe ser el total del paquete.
-        </p>
-        <p class="text-base">
-          Si no se realiza el pago hasta 35 días antes, existe un riesgo de que tus reservas quedan anuladas
+          -銀行振り込みの場合、振込先はペルー/USDとなります。下記銀行情報です。振り込みの手数料はお客様負担となります。*銀行振り込みの場合、25USDを追加でお支払い頂いております。
         </p>
       </div>
       <div class="mb-10">
-        <h3 class="text-xl font-medium mb-2">
-          Paso１. Contáctate con nosotros
-        </h3>
+        <h3 class="text-xl font-medium mb-2">銀行振り込み先：</h3>
         <p class="text-lg">
-          Dejar un mensaje por Facebook, Instagram, Whatsapp, Email o desde la plataforma de nuestra página Web.
-          Indíquenos lo siguiente para asesorar mejor tu viaje. 
+          銀行名: BBVA PERU
           <br />
-          ¿Qué actividad? ¿Para Cuándo?
+          住 所: Av. República de Panamá 3055, San Isidro, Lima, Peru
           <br />
-          ¿Cuántas personas? ¿Cuál es su nombre?
+          Swiftコード: BCONPEPL
+          <br />
+          口座番号：.011-083-000100013331-32
         </p>
         <div class="pt-4">
           <NuxtLink
             class="bg-blue text-white font-bold w-28 py-3 px-4 rounded-full flex justify-between items-center"
-            :to="localePath({ path: '/tours' })"
+            :to="localePath({ path: `/${$t('route.tours')}` })"
           >
             <span class="mr-4">Tours</span>
-            <img class="transform -rotate-90" src="~/assets/arrow-down.svg" alt="" />
+            <img
+              class="transform -rotate-90"
+              src="~/assets/arrow-down.svg"
+              alt=""
+            />
           </NuxtLink>
         </div>
       </div>

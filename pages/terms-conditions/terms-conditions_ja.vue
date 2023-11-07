@@ -1,162 +1,85 @@
 <template>
   <div class="w-3/5 py-24 px-10 mx-auto bg-white">
-    <h2 class="text-3xl my-4">
-      Política / Policy
-    </h2>
+    <h2 class="text-3xl my-4">はじめに</h2>
     <p>
-      Por favor lea detenidamente nuestros términos y condiciones antes de hacer uso de los servicios que brindamos a través de nuestro sitio Web  (<a href="https://www.f-mj.com/">www.f-mj.com</a>). Se entiende que toda persona que haga uso de los servicios que ofrece nuestra página web, ha leído, comprendido y aceptado los términos y condiciones y por lo tanto la reserva queda sujeta a lo expuesto a continuación.
+      この度はFind My Journey をご利用いただき、誠にありがとうございます。
+      弊社はペルーの現地法人です。したがって、ペルーの旅行業法と商習慣が適用されます。万一の事故や遅延などによる損害が発生した場合、ペルーの旅行業法に基づいて対応させていただきます。日本の旅行業法および約款は適用されませんので、ご注意ください。また、万一に備えて海外旅行保険に加入いただくようお願い申し上げます。
+      弊社「<a href="https://www.f-mj.com/">www.f-mj.com</a
+      >」を通じて提供されるサービスを利用する前に、弊社の利用規約をよくお読みいただき、理解し、受け入れていただくことをお願い申し上げます。ご予約のご依頼を頂く際は、下記の利用規約に同意したものとみなします。
     </p>
-    <h2 class="text-3xl my-4">
-      Contrato
-    </h2> 
+    <br />
+    <br />
+    <h2 class="text-3xl my-4">手配の流れ</h2>
     <p>
-      La reserva es considerada válida cuando “Find My Journey” recibe el primer pago por parte del cliente. Una vez realizado el primer pago el contrato entre el cliente y “Find My Journey” tendrá un compromiso legal de ambas partes.
+      まずは、メール・Line・WhatsApp等でざっくりどのようなプランが良いのかご相談ください。
+      どこへ行きたいか、ご旅行の期間、弊社のサービスについてのご質問等を頂ければ、こちらからもご提案・ご説明させていただきます。
       <br />
       <br />
-      ​Para asegurar el viaje, es necesario un depósito del 50% del precio total del paquete cuando usted realiza su reserva.
+      手配内容（お客様の日程）を確定し、手配が完了した後はメールにてお知らせいたします。
+      またやり取りが残るように、最終的なご依頼はメールにて頂くようにしております。
+      <br />
+      <br />
+      ご出発日より30日前までにお支払いください。（もし30日前を既に過ぎてからの予約は即時お振込み頂くようお願い致します。）お支払い時、パスポート情報/フライト情報をお送りいただきます。
+      こちらを頂けない場合、手配内容を確定できません。
+      <br />
+      お支払い・フライト情報・パスポート情報が遅れた場合、手配確定作業が遅れます。
+      手配確定作業が遅れるた場合、空き状況により日程の変更が必要になり、追加コストが発生することもございますので、予めご注意ください。
+      <br />
+      ご出発日より30日以内に手配のご依頼を頂いた際は、お支払いを頂き、パスポート情報とフライト情報をお送り頂いた後に手配を開始致します。
+      <br />
+      <br />
+      お支払いを頂く前に弊社の約款を必ずご確認下さい。
+      <br />
+      ご出発15日前頃に最終日程表及び、チケット類をメールにてお送り致します。
     </p>
-    <h2 class="text-3xl my-4">
-      Pagos
-    </h2> 
+    <br />
+    <br />
+    <h2 class="text-3xl my-4">お支払い方法</h2>
     <p>
-      <span class="text-lg">Pago Inicial... </span>Es 50% del monto total a pagar al momento de su reserva.
+      <span class="text-lg">クレジットカードの場合: </span
+      >こちらで決済リンクをお送り致しますので、ご自身で決済を行いください。
+      <span class="text-lg">銀行振り込みの場合: </span
+      >振込先はペルーの銀行で、アメリカドル口座となります。 下記銀行情報です。
+      <br />
+      振り込みの手数料及び、現地の受け取り手数料（25USD）はお客様負担となります。
       <br />
       <br />
-      <span class="text-lg">Pago final... </span>Pago total de monto restante del paquete que deberá ser realizado 35 días antes de su llegada.
-      Cuando la reserva se realiza a 35 días o menos antes de su llegada, se necesitará el pago total del paquete.
+      銀行名: BBVA PERU
+      <br />
+      住 所: Av. República de Panamá 3055, San Isidro, Lima, Peru
+      <br />
+      Swiftコード: BCONPEPL
+      <br />
+      口座番号：011-083-000100013331-32
     </p>
-    <h2 class="text-3xl my-4">
-      Cómo Pagar
-    </h2> 
-    <p>
-      El pago inicial y final se pueden realizar directamente con tarjeta de crédito o mediante PayPal.
-      <br />
-      <br />
-      Los pagos realizados a través de tarjeta de crédito están sujetos a un recargo de 4%, el recargo con PayPal es de 6%.
-      <br />
-      <br />
-      Nosotros le enviaremos un enlace para realizar el pago. Aceptamos todas las marcas de tarjetas de crédito.
-    </p>
-    <h2 class="text-3xl my-4">
-      Cancelaciones y cambios por parte del clientes
-    </h2> 
-    <p>
-      Cualquier cancelación o cambio por parte del cliente debe ser presentado por escrito a la brevedad posible No se aceptarán cancelaciones informadas por ninguna otra vía, esto con el fin de evitar errores.
-      <br />
-      <br />
-      El cliente es responsable de cualquier tarifa o cargo producido por la cancelación.
-    </p>
-    <h3 class="text-xl my-4">
-      1: Porcentaje de penalidad por cancelación de acuerdo al tiempo de recibido el mensaje de cancelación  (porcentaje del precio total del paquete)
-    </h3>
+    <br />
+    <h2 class="text-3xl my-4">キャンセルポリシーと返金の諸注意</h2>
     <ul>
       <li class="mb-4">
-        91 días o más 10%
+        ツアー出発日から30日前まで - ツアー代金の50％が取消料として発生します。
       </li>
       <li class="mb-4">
-        90 hasta 46 días 30%
+        ツアー出発日から15日前まで - ツアー代金の75％が取消料として発生します。
       </li>
       <li class="mb-4">
-        45 a 31 días 40%
-      </li>
-      <li class="mb-4">
-        30 a 16 días 50%
-      </li>
-      <li class="mb-4">
-        15 hasta 8 días 75%
-      </li>
-      <li class="mb-4">
-        7días o menos 100%
+        ツアー出発日から8日前まで - ツアー代金の100％が取消料として発生します。
       </li>
     </ul>
-    <h3 class="text-xl my-4">
-      2: Cambio de fechas después de haber realizado el pago:
-    </h3>
-    5% del monto total del paquete más cualquier otro pago adicional que se tenga que realizar a nuestros proveedores.
-    <h3 class="text-xl my-4">
-      3: Cambio de clientes en grupos:
-    </h3>
-    Si alguna persona del grupo no puede realizar el viaje es posible transferir los servicios reservados a otra persona. Se necesitará pagar todos los montos cobrados por los proveedores de servicios. En el caso de vuelos aéreos consultaremos con la aerolínea si es posible cambiar los datos, de lo contrario será necesario comprar un ticket nuevo.
     <br />
     <br />
-    Si el contrato se cancela después del inicio del viaje, el cliente deberá pagar el costo de los servicios de viaje ya prestados. Solamente le reembolsaremos el costo de los servicios no recibidos menos aquellos que nuestros proveedores no pueden reembolsar.
-    <h2 class="text-3xl my-4">
-      Cancelaciones y cambios por parte de "Find My Journey"
-    </h2> 
-    <h3 class="text-xl my-4">
-      1: Antes del inicio de viaje
-    </h3>
-    Nuestra política es cumplir con los servicios tal como se lo ofrecimos. Sin embargo, en algunas ocasiones podremos acortar o modificar su itinerario, o sustituir actividades, hoteles, comidas o transporte según lo consideremos necesario con el fin de brindarle la mejor alternativa de acuerdo a las circunstancias. Ninguna de estas modificaciones o cambios afectará el precio del paquete.
-    <h3 class="text-xl my-4">
-      2: Cancelación de servicios una vez iniciado su viaje:
-    </h3>
-    Nos reservamos el derecho de cancelar un servicio en cualquier momento por un motivo que comprometa la calidad del viaje o la seguridad de los pasajeros o cualquier otra circunstancia fuera de nuestro control. En este caso, le reembolsaremos esta parte de su viaje o le brindaremos otros servicios que compense el monto pagado previa coordinación con usted.
+    返金方法はお客様と弊社で相談の上、確定します。ただし、返金時の振り込み手数料や受け取り手数料はお客様の負担となります。なお、マチュピチュ遺跡やワイナピチュ登山のチケットなど、シーズンによっては空きが迅速になくなることも多いため、場合によっては事前にお支払いいただくことがあります。
+    <br />
+    また、マチュピチュ遺跡など、限られた空きがあるチケットは、一度購入すると即発券となります。この場合、チケット購入のために頂いた代金はご返金できかねますので、予めご了承ください。
     <br />
     <br />
-    En caso de que necesitemos cancelar el viaje (por situaciones fuera de nuestro control como desastres naturales, guerra, disturbios, etc), le reembolsaremos los montos pagados en su totalidad.
-    <h2 class="text-3xl my-4">
-      Cancelaciones, cambios y otros de vuelos
-    </h2> 
-    <ul class="pl-10">
-      <li class="list-disc mb-4">
-        Todos los paquetes aéreos y boletos aéreos están sujetos a las políticas de cancelación impuestas por las aerolíneas. “Find My Journey” es un agente de viajes únicamente y no tenemos ninguna responsabilidad por la prestación de servicios por parte de las aerolíneas.
-      </li>
-      <li class="list-disc mb-4">
-        Nuestra compañía no se hará responsable cuando se cancela el vuelo o se cambia el horario de viaje debido a un desastre natural, guerra, disturbios, demora de la aeronave, mal clima, huelga, etc.  O si se le niega el embarque debido a un overbooking por parte de la aerolínea.
-      </li>
-      <li class="list-disc mb-4">
-        “Find my journey” no será responsable si se emite un boleto diferente a su nombre porque el cliente no brindó la información correcta de sus datos personales.
-      </li>
-      <li class="list-disc mb-4">
-        Las reservas de vuelos no son reembolsables ni transferibles.
-      </li>
-    </ul>
-    <h2 class="text-3xl my-4">
-      Seguros de viajes
-    </h2> 
-    Es muy recomendable tener un seguro de viaje antes de visitar nuestro país.​
-    <h2 class="text-3xl my-4">
-      Precios
-    </h2> 
-    Todos los precios brindados son por persona y están en dólares estadounidenses.
-    <h2 class="text-3xl my-4">
-      Reembolsos
-    </h2> 
-    Cuando el cliente solicite el reembolso de algún servicio con el que no esté de acuerdo, nosotros consultaremos con nuestro proveedor. En el caso de que sea posible el reembolso se hará menos las penalidades cobradas por nuestros proveedores además el cliente debe asumir la comisión de la plataforma de pago (Paypal 6% / Tarjetas de crédito 4%).
+    <h3 class="text-xl my-4">ペルー国内の消費税について</h3>
+    弊社の提示料金は税抜きの額です。なぜなら外国人旅行者はペルー国内で提供される旅行サービスの一部が免税となるからです。
     <br />
+    しかし、これは観光ビザ（Tourist
+    visa）で入国されている場合にのみ適用されます。つまり、ペルーに居住する外国人や、海外に永住しており、DNI（ペルー国民身分証明書）を使用してペルー国民として旅行される場合、免税の対象外となります。
     <br />
-    Todos los reembolsos correspondientes se realizarán directamente a su tarjeta de crédito o cuenta bancaria, menos las tarifas indicadas.
-    <h2 class="text-3xl my-4">
-      Alojamientos
-    </h2> 
-    En caso de que se haga la reserva y el hotel que está mencionado en el paquete que usted reservó no tenga disponibilidad de habitación se le brindara otra opción similar que cubra con los estándares de calidad de acuerdo al tipo de alojamiento ofrecido. No se realizarán cambios después del pago.
-    <h3 class="text-xl my-4">
-      Tomar en Cuenta:
-    </h3>
-    <ul class="pl-10">
-      <li class="list-disc mb-4">
-        Es necesario presentar su pasaporte en todos los alojamientos que tendrá en el Perú los cuales tomarán una fotocopia de este documento para que usted pueda registrarse.
-      </li>
-      <li class="list-disc mb-4">
-        Las tarifas de alojamiento incluidas en nuestros paquetes no incluyen impuestos. Todo extranjero que no radica en el Perú está exonerado de impuestos en alojamientos siempre y cuando tenga su tarjeta de migración física o virtual, ésta se le brindará a su llegada al Perú.
-      </li>
-      <li class="list-disc mb-4">
-        Si ingresa al Perú por vía terrestre se le entregará la tarjeta de migración (TAM) física y es necesario conservarlo y entregarlo en cada alojamiento ser exonerado de impuestos
-      </li>
-      <li class="list-disc mb-4">
-        Si usted pierde la tarjeta de migración, se tendría que hacer un trámite que le costará USD 30.
-      </li>
-      <li class="list-disc mb-4">
-        Si ingresa al Perú por vía aérea la tarjeta de migración (TAM) es virtual. En este caso, usted sólo deberá presentar su pasaporte en el alojamiento.
-      </li>
-      <li class="list-disc mb-4">
-        Si usted no presenta la tarjeta de migración deberá pagar impuestos que son 18% del alojamiento.
-      </li>
-    </ul>
-    <h2 class="text-3xl my-4">
-      Acuerdo
-    </h2> 
-    Estos términos y condiciones, los contenidos en el sitio web de “Find My Journey” y los materiales previos a la salida son un acuerdo entre nuestra compañía y el cliente.
+    お振込み後に発覚した場合は追加で18％のお支払いを頂く必要がございます。もし免税の条件に該当するかどうか確信が持てない場合、事前にお問い合わせいただくことをお勧めします。
+    <br />
   </div>
 </template>
 
