@@ -61,7 +61,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 import { useResult, useQuery } from '@vue/apollo-composable'
 import DestinosQ from '~/apollo/queries/Destinos.gql'
 import { Destino } from '~/types/@types'
@@ -69,7 +69,8 @@ import { Destino } from '~/types/@types'
 export default defineComponent({
   name: 'ToursPage',
   setup() {
-    const { result } = useQuery(DestinosQ)
+    const { app } = useContext()
+    const { result } = useQuery(DestinosQ, { locale: app.i18n.locale })
     const destinos = useResult(result, [], (data) => data?.destinos as Destino[])
 
     const handleScroll = () => {

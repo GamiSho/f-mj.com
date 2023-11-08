@@ -1,10 +1,14 @@
 <template>
-  <article v-if="blog" class="md:container bg-white p-4">
-    <h1 class="text-4xl font-serif font-bold my-10 text-center">{{ blog.title }}</h1>
-    <div>
-      <img :src="blog.image.url" alt="">
+  <article v-if="blog" class="md:container p-4">
+    <h1 class="text-4xl font-serif font-bold my-10 text-center">
+      {{ blog.title }}
+    </h1>
+    <div class="lg:w-4/6 w-full mx-auto">
+      <img :src="blog.image.url" alt="" />
     </div>
-    <Contenido :html="blog.contenido.html" />
+    <div class="lg:w-4/6 w-full mx-auto">
+      <Contenido :html="blog.contenido.html" />
+    </div>
   </article>
 </template>
 
@@ -24,8 +28,8 @@ export default defineComponent({
     const blog = useResult(result, undefined, (data) => data?.blog as Blog)
 
     return {
-      blog
+      blog,
     }
-  }
+  },
 })
 </script>

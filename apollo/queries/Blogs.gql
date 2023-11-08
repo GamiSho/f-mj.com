@@ -1,5 +1,5 @@
 query Blogs($locale: Locale!) {
-  blogs(orderBy: publishedAt_DESC, locales: [$locale]) {
+  blogs(orderBy: publishedAt_DESC, locales: [$locale], where: {title_not_starts_with: "\\_"}) {
     id
     title
     slug

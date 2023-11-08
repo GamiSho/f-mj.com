@@ -1,5 +1,5 @@
-query Destinos {
-  destinos(orderBy: orden_ASC) {
+query Destinos($locale: Locale!) {
+  destinos(orderBy: orden_ASC, locales: [$locale], where: {name_not_starts_with: "\\_"}) {
     name
     description
     image {
