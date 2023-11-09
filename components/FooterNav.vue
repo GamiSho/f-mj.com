@@ -5,67 +5,59 @@
     >
       <NuxtLink
         class="block px-1 h-6 hover:opacity-60"
-        :to="localePath({ path: '/tours' })"
-        >Tours</NuxtLink
+        :to="localePath({ path: `/${$t('route.tours')}` })"
+        >{{ $t('title.tours') }}</NuxtLink
       >
       <NuxtLink
         class="block px-1 h-6 hover:opacity-60"
-        :to="localePath({ path: '/nosotros' })"
-        >Nosotros</NuxtLink
+        :to="localeRoute({ path: `/${$t('route.about-us')}` })"
+        >{{ $t('title.about-us') }}</NuxtLink
       >
       <NuxtLink
         class="block px-1 h-6 hover:opacity-60"
-        :to="localePath({ path: 'como-reservar' })"
-        >¿Cómo Reservar?</NuxtLink
+        :to="localePath({ path: `/${$t('route.booking')}` })"
+        >{{ $t('title.booking') }}</NuxtLink
       >
     </div>
     <div class="md:w-80 h-px mx-auto my-6 bg-white"></div>
     <div
       class="md:container flex flex-col md:flex-row justify-center gap-5 md:gap-10 font-light text-base"
     >
-      <NuxtLink class="hover:opacity-60" :to="localePath({ path: '/politica' })">
+      <NuxtLink
+        class="hover:opacity-60"
+        :to="localePath({ path: `/${$t('route.privacy')}` })"
+      >
         {{ $t('title.privacy') }}
       </NuxtLink>
-      <NuxtLink class="hover:opacity-60" :to="localePath({ path: '/contactar' })">
+      <NuxtLink
+        class="hover:opacity-60"
+        :to="localePath({ path: `/${$t('route.contact')}` })"
+      >
         {{ $t('title.contact') }}
       </NuxtLink>
     </div>
-    <div v-if="false" class="p-8 lg:hidden">
-      <ul
-        class="lang-select relative w-24 m-auto flex flex-col items-center justify-evenly font-light text-ml bg-black border border-white"
-        :class="{ open: isLocaleSelectOpen === true }"
-        @click="toggleLocaleSelect"
-      >
-        <li
-          v-for="locale in $i18n.locales"
-          :key="locale.code"
-          :class="{ 'is-active': locale.code === $i18n.locale }"
-          class="border-solid pl-4 py-2 w-full"
-        >
-          <a :href="switchLocalePath(locale.code)">
-            {{ locale.name }}
-          </a>
-        </li>
-        <svg
-          class="absolute top-3.5 right-4"
-          width="16"
-          height="9"
-          viewBox="0 0 16 9"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15 1L8 8L1 1"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </ul>
-    </div>
     <div class="mt-4 pb-10 text-center">
-      <span class="text-sm font-light">© Find my journey</span>
+      <span
+        class="text-sm font-light"
+        :class="{ hidden: $i18n.locale === 'ja' }"
+      >
+        ©Find My Journey <br />
+        WARAKU SERVICE S.R.L <br />
+        SUNAT-RUC 20606923733
+      </span>
+      <span
+        class="text-sm font-light"
+        :class="{ hidden: $i18n.locale === 'es' }"
+      >
+        会社情報 <br />
+        ペルー国税務省 (SUNAT) <br />
+        納税登録番号 (RUC)<br />
+        20606923733<br />
+
+        会社名称 <br />
+        ©Find My Journey <br />
+        WARAKU SERVICE S.R.L
+      </span>
     </div>
   </footer>
 </template>
@@ -74,17 +66,7 @@
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  setup() {
-    const isLocaleSelectOpen = ref(false)
-    const toggleLocaleSelect = () => {
-      isLocaleSelectOpen.value = !isLocaleSelectOpen.value
-    }
-
-    return {
-      isLocaleSelectOpen,
-      toggleLocaleSelect,
-    }
-  },
+  setup() {},
 })
 </script>
 

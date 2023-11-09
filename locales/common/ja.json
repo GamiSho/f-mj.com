@@ -1,8 +1,16 @@
 {
-  "title.privacy": "Policy word",
-  "title.contact": "Contactar",
+  "title.privacy": "お取引約款",
+  "title.contact": "ご依頼・お問い合わせはこちらから",
   "title.sustainability": "Our SDGs",
   "title.news": "News",
-  "title.adventure": "Destino",
-  "title.blog": "Blog"
+  "title.adventure": "Place to go",
+  "title.blog": "ブログ",
+  "title.tours": "ツアー",
+  "title.about-us": "私たちについて",
+  "title.booking": "手配からサービス開始までの流れ",
+  "route.about-us": "about-us",
+  "route.booking": "booking",
+  "route.contact": "contact",
+  "route.privacy": "privacy-policy",
+  "route.tours": "tours"
 }

@@ -13,7 +13,11 @@ const config: NuxtConfig = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'format-detection', content: 'telephone=no' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Find my journey' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Find my journey',
+      },
       { hid: 'og:type', property: 'og:type', content: 'article' },
     ],
     link: [
@@ -23,9 +27,7 @@ const config: NuxtConfig = {
     ],
   },
   css: ['~/assets/css/tailwind.css'],
-  plugins: [
-    '~/plugins/apollo',
-  ],
+  plugins: ['~/plugins/apollo'],
   components: [
     '~/components',
     '~/components/buttons',
@@ -56,29 +58,29 @@ const config: NuxtConfig = {
   env: {},
   i18n: {
     locales: [
-      {
-        code: 'en',
-        iso: 'en-US',
-        file: 'common/en.json',
-        name: 'EN',
-        language: 'English',
-      },
+      // {
+      //   code: 'en',
+      //   iso: 'en-US',
+      //   file: 'common/en.json',
+      //   name: 'EN',
+      //   language: 'English',
+      // },
       {
         code: 'es',
         iso: 'es-PE',
         file: 'common/es-PE.json',
-        name: 'ES',
+        name: 'ESPAÑOL',
         language: 'Español',
       },
       {
         code: 'ja',
         iso: 'ja-JP',
         file: 'common/ja.json',
-        name: 'JA',
+        name: '日本語',
         language: 'Japanese',
       },
     ],
-    strategy: 'no_prefix',
+    strategy: 'prefix_and_default',
     defaultLocale: 'es',
     langDir: 'locales/',
     vueI18n: {
@@ -90,6 +92,34 @@ const config: NuxtConfig = {
       redirectOn: 'root',
     },
     vueI18nLoader: true,
+    parsePages: false,
+    // make sure to match this routes with locales/common/_lan_.json > route._prop file
+    pages: {
+      'about/about_es': {
+        es: '/nosotros',
+      },
+      'about/about_ja': {
+        ja: '/about-us',
+      },
+      'booking/booking_es': {
+        es: '/como-reservar',
+      },
+      'booking/booking_ja': {
+        ja: '/booking',
+      },
+      'contact/contact_es': {
+        es: '/contactanos',
+      },
+      'contact/contact_ja': {
+        ja: '/contact',
+      },
+      'terms-conditions/terms-conditions_ja': {
+        ja: '/privacy-policy',
+      },
+      'terms-conditions/terms-conditions_es': {
+        es: '/terminos-y-condiciones',
+      },
+    },
   },
   generate: {
     fallback: true,
@@ -108,16 +138,15 @@ const config: NuxtConfig = {
     },
     includeNodeModules: true,
   },
-  firebase: 
-  {
+  firebase: {
     config: {
       apiKey: process.env.FIREBASE_CONFIG_API_KEY,
-      authDomain: "fmj-site.firebaseapp.com",
-      projectId: "fmj-site",
-      storageBucket: "fmj-site.appspot.com",
-      messagingSenderId: "307908233050",
-      appId: "1:307908233050:web:705932be63b738e9121563",
-      measurementId: "G-XRY52CDVDQ"
+      authDomain: 'fmj-site.firebaseapp.com',
+      projectId: 'fmj-site',
+      storageBucket: 'fmj-site.appspot.com',
+      messagingSenderId: '307908233050',
+      appId: '1:307908233050:web:705932be63b738e9121563',
+      measurementId: 'G-XRY52CDVDQ',
     },
     services: {
       analytics: true,
