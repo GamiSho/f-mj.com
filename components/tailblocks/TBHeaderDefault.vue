@@ -47,7 +47,7 @@
           type="button"
           @click="toggleLocaleSelect"
         >
-          {{ $i18n.locale }}
+          {{ localeName }}
           <svg
             class="w-2.5 h-2.5 ml-2.5"
             aria-hidden="true"
@@ -137,30 +137,30 @@
           </div>
           <div class="mb-4">
             <NuxtLink
-              :to="localePath({ path: '/tours' })"
+              :to="localePath({ path: `/${$t('route.tours')}` })"
               @click.native="closeMenu"
-              >Tours</NuxtLink
+              >{{ $t('title.tours') }}</NuxtLink
             >
           </div>
           <div class="mb-4">
             <NuxtLink
-              :to="localePath({ path: '/nosotros' })"
+              :to="localeRoute({ path: `/${$t('route.about-us')}` })"
               @click.native="closeMenu"
-              >Nosotros</NuxtLink
+              >{{ $t('title.about-us') }}</NuxtLink
             >
           </div>
           <div>
             <NuxtLink
-              :to="localePath({ path: '/como-reservar' })"
+              :to="localePath({ path: `/${$t('route.booking')}` })"
               @click.native="closeMenu"
-              >¿Cómo Reservar?</NuxtLink
+              >{{ $t('title.booking') }}</NuxtLink
             >
           </div>
           <div>
             <NuxtLink
               :to="localePath({ path: '/blog' })"
               @click.native="closeMenu"
-              >Blog</NuxtLink
+              >{{ $t('title.blog') }}</NuxtLink
             >
           </div>
         </nav>
@@ -170,13 +170,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
+    const { app } = useContext()
+    const localeName = ref('Español')
     const menuChecked = ref(false)
-    const closeMenu = () => (menuChecked.value = false)
     const isLocaleSelectOpen = ref(false)
+
+    // @ts-ignore
+    localeName.value =
+      // @ts-ignore
+      app.i18n.locales?.find(
+        (l: any | undefined) => l?.code === app.i18n.locale
+        // @ts-ignore
+      )?.name || 'Español'
+
+    const closeMenu = () => (menuChecked.value = false)
+
     const toggleLocaleSelect = () => {
       isLocaleSelectOpen.value = !isLocaleSelectOpen.value
     }
@@ -186,6 +198,7 @@ export default defineComponent({
       toggleLocaleSelect,
       menuChecked,
       closeMenu,
+      localeName,
     }
   },
 })

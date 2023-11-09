@@ -84,10 +84,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useMeta } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   name: 'PoliticaPage',
+  setup() {
+    const { title } = useMeta()
+    const { app } = useContext()
+    const localMessages = app.i18n.messages[app.i18n.locale]
+    title.value = localMessages['title.privacy'].toString()
+  },
   head() {
     return {
       title: 'Politica',

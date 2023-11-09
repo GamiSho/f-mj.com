@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useMeta } from '@nuxtjs/composition-api'
 import { useResult, useQuery } from '@vue/apollo-composable'
 import BlogsQ from '~/apollo/queries/Blogs.gql'
 import { Blog } from '~/types/@types'
@@ -26,6 +26,10 @@ export default defineComponent({
   setup() {
     const { app } = useContext()
     const { result } = useQuery(BlogsQ, { locale: app.i18n.locale })
+    const { title } = useMeta()
+    const localMessages = app.i18n.messages[app.i18n.locale]
+    title.value = localMessages['title.blog'].toString()
+
     const posts = useResult(result, [], (data) => data?.blogs as Blog[])
 
     return {

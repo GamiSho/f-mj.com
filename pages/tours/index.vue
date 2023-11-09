@@ -12,28 +12,44 @@
         class="font-bold sm:font-medium text-lg sm:text-sm py-2 sm:py-2 px-4 sm:px-2 sm:mx-2 mx-4 sm:mx-2 rounded bg-blue text-white inline-flex items-center"
         :to="localePath({ path: 'tours#Cusco' })"
       >
-        <img class="fill-current w-4 h-4 mr-2" src="~/assets/arrow-down.svg" alt="">
+        <img
+          class="fill-current w-4 h-4 mr-2"
+          src="~/assets/arrow-down.svg"
+          alt=""
+        />
         <span>Cusco</span>
       </NuxtLink>
       <NuxtLink
         class="font-bold sm:font-medium text-lg sm:text-sm py-2 sm:py-2 px-4 sm:px-2 sm:mx-2 mx-4 sm:mx-2 rounded bg-blue text-white inline-flex items-center"
         :to="localePath({ path: 'tours#Puno' })"
       >
-        <img class="fill-current w-4 h-4 mr-2" src="~/assets/arrow-down.svg" alt="">
+        <img
+          class="fill-current w-4 h-4 mr-2"
+          src="~/assets/arrow-down.svg"
+          alt=""
+        />
         <span>Puno</span>
       </NuxtLink>
       <NuxtLink
         class="font-bold sm:font-medium text-lg sm:text-sm py-2 sm:py-2 px-4 sm:px-2 sm:mx-2 mx-4 sm:mx-2 rounded bg-blue text-white inline-flex items-center"
         :to="localePath({ path: 'tours#Lima' })"
       >
-        <img class="fill-current w-4 h-4 mr-2" src="~/assets/arrow-down.svg" alt="">
+        <img
+          class="fill-current w-4 h-4 mr-2"
+          src="~/assets/arrow-down.svg"
+          alt=""
+        />
         <span>Lima</span>
       </NuxtLink>
       <NuxtLink
         class="font-bold sm:font-medium text-lg sm:text-sm py-2 sm:py-2 px-4 sm:px-2 sm:mx-2 mx-4 sm:mx-2 rounded bg-blue text-white inline-flex items-center"
         :to="localePath({ path: 'tours#PAQUETE' })"
       >
-        <img class="fill-current w-4 h-4 mr-2" src="~/assets/arrow-down.svg" alt="">
+        <img
+          class="fill-current w-4 h-4 mr-2"
+          src="~/assets/arrow-down.svg"
+          alt=""
+        />
         <span>PAQUETE</span>
       </NuxtLink>
     </div>
@@ -53,7 +69,11 @@
           v-show="visible"
           @click="scrollTop"
         >
-          <img class="transform rotate-180" src="~/assets/arrow-down.svg" alt="" />
+          <img
+            class="transform rotate-180"
+            src="~/assets/arrow-down.svg"
+            alt=""
+          />
         </button>
       </transition>
     </div>
@@ -61,7 +81,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  ref,
+  useContext,
+  useMeta,
+} from '@nuxtjs/composition-api'
 import { useResult, useQuery } from '@vue/apollo-composable'
 import DestinosQ from '~/apollo/queries/Destinos.gql'
 import { Destino } from '~/types/@types'
@@ -71,17 +96,25 @@ export default defineComponent({
   setup() {
     const { app } = useContext()
     const { result } = useQuery(DestinosQ, { locale: app.i18n.locale })
-    const destinos = useResult(result, [], (data) => data?.destinos as Destino[])
+    const { title } = useMeta()
+    const localMessages = app.i18n.messages[app.i18n.locale]
+    title.value = localMessages['title.booking'].toString()
+
+    const destinos = useResult(
+      result,
+      [],
+      (data) => data?.destinos as Destino[]
+    )
 
     const handleScroll = () => {
-      const scrollY = window.scrollY;
+      const scrollY = window.scrollY
       if (!visible.value) {
-        visible.value = scrollY > 100;
+        visible.value = scrollY > 100
       } else if (scrollY < 90) {
-        visible.value = !visible.value;
+        visible.value = !visible.value
       }
     }
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     const visible = ref(false)
     const scrollTop = () => {
       window.scrollTo({
@@ -117,10 +150,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
-.fade-enter, .fade-leave-to {
-  opacity: 0
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

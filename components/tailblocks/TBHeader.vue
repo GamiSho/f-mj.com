@@ -45,7 +45,7 @@
           type="button"
           @click="toggleLocaleSelect"
         >
-          {{ $i18n.locale }}
+          {{ localeName }}
           <svg
             class="w-2.5 h-2.5 ml-2.5"
             aria-hidden="true"
@@ -92,11 +92,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useContext } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
+    const { app } = useContext()
+    const localeName = ref('Español')
     const isLocaleSelectOpen = ref(false)
+
+    // @ts-ignore
+    localeName.value =
+      // @ts-ignore
+      app.i18n.locales?.find(
+        (l: any | undefined) => l?.code === app.i18n.locale
+        // @ts-ignore
+      )?.name || 'Español'
+
+    // update localeName variable on load
     const toggleLocaleSelect = () => {
       isLocaleSelectOpen.value = !isLocaleSelectOpen.value
     }
@@ -104,6 +116,7 @@ export default defineComponent({
     return {
       isLocaleSelectOpen,
       toggleLocaleSelect,
+      localeName,
     }
   },
 })
